@@ -35,36 +35,36 @@ divWithClass.appendChild(btnAdd)
 
 sectionMain.appendChild(divWithClass)
 
-function addAndSubtract () {
-    let result = 0;
-    btnAdd.addEventListener("click", function() {
-        result = Number(numCounter.innerText) + 1;
-
-        if (result > 100) {
-            result = 100
-        }        
-        numCounter.innerText = result
-    })
-    btnSubtract.addEventListener("click", function() {
-        result = Number(numCounter.innerText) - 1;
-
-        if (result < 0) {
-            result = 0
-        }
-        numCounter.innerText = result;
-    })
-    btnZerar.addEventListener("click", function() {
-        result = 0;
-
-        numCounter.innerText = result;
-    })
-
+function pintar () {
     if (Number(numCounter.innerText) % 2 === 0) {
-        numCounter.style.color = "green";
-    }
+        numCounter.style.color = 'green'
+    } 
     if (Number(numCounter.innerText) % 2 !== 0) {
-        numCounter.style.color = "red"
+        numCounter.style.color = 'red'
     }
 }
 
-addAndSubtract()
+btnAdd.addEventListener("click", function() {
+    let result = Number(numCounter.innerText) + 1;
+
+    if (result > 10) {
+        result = 10
+    }        
+    numCounter.innerText = result
+    pintar()
+})
+
+btnSubtract.addEventListener("click", function() {
+   let result = Number(numCounter.innerText) - 1;
+
+    if (result < 0) {
+        result = 0
+    }
+    numCounter.innerText = result;
+    pintar()
+})
+
+btnZerar.addEventListener("click", function() {
+    let result = 0;
+    numCounter.innerText = result;
+})
