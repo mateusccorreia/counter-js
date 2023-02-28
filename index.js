@@ -17,6 +17,7 @@ const subtrair = document.querySelector("#subtrair");
 const adicionar = document.querySelector("#add");
 const output = document.querySelector("#output");
 const btnZerar = document.createElement('button');
+btnZerar.id = 'zerar'
 const textBtnZerar = document.createTextNode('Zerar');
 
 //Inserindo os textos nos elementos criados
@@ -26,7 +27,7 @@ btnSubtract.appendChild(textBtnSub);
 numCounter.appendChild(textNumCounter);
 btnZerar.appendChild(textBtnZerar);
 
-//Inserindo os elementos dentro da div principal
+//Inserindo os elementos dentro da main
 divWithClass.appendChild(title)
 divWithClass.appendChild(numCounter)
 divWithClass.appendChild(btnSubtract)
