@@ -45,6 +45,8 @@ function pintar () {
     }
 }
 
+pintar()
+
 btnAdd.addEventListener("click", function() {
     let result = Number(numCounter.innerText) + 1;
 
